@@ -4,10 +4,10 @@ import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css";
 
 const form = document.querySelector('.form');
-const delayInput = document.querySelector('input[name="delay"]');
-const valueFulfilled = document.querySelector('input[value="fulfilled"]');
-const btnSubmit = document.querySelector("[type=submit]");
-const valueRejected = document.querySelector('input[value="rejected"]');
+// const delayInput = document.querySelector('input[name="delay"]');
+// const valueFulfilled = document.querySelector('input[value="fulfilled"]');
+// const btnSubmit = document.querySelector("[type=submit]");
+// const valueRejected = document.querySelector('input[value="rejected"]');
 
 form.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -40,6 +40,9 @@ form.addEventListener("submit", (event) => {
             message: `❌ Rejected promise in {delay}ms`,
             position: 'topRight',
         });
+    })  
+    .finally(() => {
+      form.reset();
     });
 });
 
