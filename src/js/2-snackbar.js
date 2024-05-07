@@ -37,7 +37,7 @@ form.addEventListener("submit", (event) => {
     .catch((delay) => {
         iziToast.error({
             title: '❌ Відмова',
-            message: `❌ Rejected promise in {delay}ms`,
+            message: `❌ Rejected promise in${delay}ms`,
             position: 'topRight',
         });
     })  
